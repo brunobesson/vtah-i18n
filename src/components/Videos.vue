@@ -22,14 +22,16 @@ const videos = ref([
 
 <template>
   <nav>
-    <button class="last selected">Last videos</button>
-    <button class="popular">Popular</button>
+    <button class="last selected">{{ $t('Last videos') }}</button>
+    <button class="popular">{{ $t('Popular') }}</button>
   </nav>
   <ul class="videos">
     <li v-for="video in videos" :key="video.title">
       <figure>
         <img :src="`/src/assets/videos/${video.id}.svg`" />
-        <figcaption>Viseo Tech An Hour - {{ video.title }}</figcaption>
+        <figcaption>
+          {{ $t('Viseo Tech An Hour') }} - {{ video.title }}
+        </figcaption>
       </figure>
     </li>
   </ul>
